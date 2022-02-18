@@ -8,7 +8,10 @@ use App\Train;
 class ControllerTrain extends Controller
 {
     public function index() {
-        $trains = Train::all();
-        @dd($trains);
+        $trains = Train::where("startingDate", "2022-02-18")->get();
+        // @dd($trains);
+        $data = ["trains" => $trains];
+
+        return view ("home", $data);
     }
 }
