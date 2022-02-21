@@ -14,11 +14,11 @@ class UpdateTrainsTable extends Migration
     public function up()
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->string('startingDate')->after('arrivingStation');
+            $table->date('startingDate')->nullable()->after('arrivingStation');
         });
 
         Schema::table('trains', function (Blueprint $table) {
-            $table->string('arrivingDate')->after('startingTime');
+            $table->date('arrivingDate')->nullable()->after('startingTime');
         });
     }
 

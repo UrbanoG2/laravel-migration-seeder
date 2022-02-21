@@ -25,6 +25,14 @@
                         </ul>
                     </li>
                     <li>Codice: {{ $train->trainCode }}</li>
+
+                    <li>
+                        @if ($train->inTime == false)
+                            Treno in ritardo
+                        @else 
+                            Treno in orario
+                        @endif
+                    </li>
                 </ul>
                 {{-- @dd($train) --}}
             @endforeach
