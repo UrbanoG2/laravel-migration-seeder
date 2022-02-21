@@ -15,7 +15,7 @@
                 <ul>
                     <li>Stazione di partenza: {{ $train->startingStation }}</li>
                     <li>Stazione di arrivo: {{ $train->arrivingStation }}</li>
-                    <li>Data di partenza
+                    {{-- <li>Data di partenza
                         <ul>
                             <li>Data di partenza: {{ $train->startingDate }} alle {{ $train->startingTime }} </li>
                         </ul>
@@ -32,8 +32,13 @@
                         @else 
                             Treno in orario
                         @endif
-                    </li>
+                    </li> --}}
+
+                    <li>Codice: {{ $train->trainCode }}</li>
+
                 </ul>
+
+                <button><a href="{{ route('show', $train) }}">Show more</a></button>
                 {{-- @dd($train) --}}
             @endforeach
         </div>
