@@ -1,0 +1,31 @@
+.contained {
+  border: 1px solid black;
+  width: 60%;
+  margin: 0 auto;
+  padding: 1.5em;
+}
+
+.container {
+  width: 100%;
+}
+.container .contained {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  margin-top: 1em;
+}
+.container .contained ul {
+  list-style: none;
+}
+.container .contained button {
+  padding: 0.5em 1.5em;
+  border: none;
+}
+.container .contained button a {
+  text-decoration: none;
+  text-transform: uppercase;
+}

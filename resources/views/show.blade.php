@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('base')
 
+@section('content')
+
+<div class="contained">
     <ul>
-
         <h1>{{ $train->startingStation }} - {{ $train->arrivingStation }} - {{ $train->trainCode }}</h1>
         <li>Data di partenza
             <ul>
@@ -29,5 +23,9 @@
             @endif
         </li>
     </ul>
-</body>
-</html>
+
+    <button><a href="">Acquista</a></button>
+</div>
+
+
+@endsection
